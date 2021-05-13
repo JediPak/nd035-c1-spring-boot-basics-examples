@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:object="${chatMessage}" method="post" action ="#">
+       <label>Message:</label>
+        <input id="message" type="text" th:field="*{message}">
+
+
+      <label>Message Type</label>
+      <select
+              th:object="${chatForm}"
+              id="messageMode" name="chatForm">
+        <option
+                value="say"
+                th:field="*{chatForm}">Say</option>
+        <option
+                value="shout"
+                th:field="*{chatForm}">Shout</option>
+        <option
+                value="whisper"
+                th:field="*{chatForm}">Whisper</option>
+      </select>
+
+
+      <input type="submit">
+    </form>
+
+    <h1>List of all the inputs</h1>
+    <h3 th:each="msg : ${messages}"
+        th:text="'Message' + ${msg.message}"
+        th:unless="${msg.message.contains('bad')}">placeholder</h3>
+</body>
+</html>
