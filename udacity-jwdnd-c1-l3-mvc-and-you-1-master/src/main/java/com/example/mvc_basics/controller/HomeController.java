@@ -8,7 +8,14 @@ public class HomeController {
 
     @RequestMapping("/home")
     public String getHomePage() {
+
         return "home";
+    }
+
+    @RequestMapping("/cat")
+    public String getCatPage() {
+
+        return "cat";
     }
 
 }

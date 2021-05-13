@@ -19,9 +19,9 @@ public class HomeController {
     }
 
     @GetMapping("/home")
-    public String getHomePage(@ModelAttribute("newMessage") MessageForm newMessage, Model model) {
+    public String getHomePage(Model model) {
         model.addAttribute("greetings", this.messageListService.getMessages());
-        return "home";
+        return "home1";
     }
 
     @PostMapping("/home")
@@ -29,7 +29,7 @@ public class HomeController {
         messageListService.addMessage(messageForm.getText());
         model.addAttribute("greetings", messageListService.getMessages());
         messageForm.setText("");
-        return "home";
+        return "home1";
     }
 
 }
