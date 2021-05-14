@@ -14,6 +14,10 @@ public class MessageService {
 
    private MessageMapper messageMapper;
 
+   public MessageService(MessageMapper messageMapper) {
+      this.messageMapper = messageMapper;
+   }
+
    public void setMessages(Message message) {
       messageMapper.createMessage(message);
    }

@@ -8,13 +8,13 @@ import java.util.List;
 @Mapper
 public interface MessageMapper {
 
-   @Select("SELECT * FROM Message WHERE username = #{username}")
+   @Select("SELECT * FROM MESSAGES WHERE username = #{username}")
    List<Message> getMessage_usern(String username);
 
-   @Select("SELECT * FROM Message")
+   @Select("SELECT * FROM MESSAGES")
    List <Message> getMessages();
 
-   @Insert("INSERT INTO Message (username, message)" +
+   @Insert("INSERT INTO MESSAGES (username, message)" +
            "VALUES (#{username}, #{message})")
    @Options(keyProperty = "messageid", useGeneratedKeys = true)
    Integer createMessage(Message message);

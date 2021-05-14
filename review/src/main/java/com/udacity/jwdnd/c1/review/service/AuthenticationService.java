@@ -15,6 +15,11 @@ public class AuthenticationService implements AuthenticationProvider {
    private UserService userService;
    private HashService hashService;
 
+   public AuthenticationService(UserService userService, HashService hashService) {
+      this.userService = userService;
+      this.hashService = hashService;
+   }
+
    @Override
    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
       String username = authentication.getName();
