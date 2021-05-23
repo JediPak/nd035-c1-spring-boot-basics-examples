@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34e2723f-c5fb-43e7-adc1-f32702ebef69" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../review/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../review/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../review/src/main/java/com/udacity/jwdnd/c1/review/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../review/src/main/java/com/udacity/jwdnd/c1/review/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/udacity/jwdnd/c1/review/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/udacity/jwdnd/c1/review/LoginPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/udacity/jwdnd/c1/review/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/udacity/jwdnd/c1/review/SignupPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/udacity/jwdnd/c1/review/SignupPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/udacity/jwdnd/c1/review/LoginPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/udacity/jwdnd/c1/review/LoginPageObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/udacity/jwdnd/c1/review/LoginTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/udacity/jwdnd/c1/review/SignupPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/udacity/jwdnd/c1/review/SignupPageObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l5-final-review-solution-master/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l5-final-review-solution-master/.idea/compiler.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +43,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.ReviewApplication">
     <configuration name="ReviewApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -118,5 +132,8 @@
       <updated>1620879553953</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
 </project>

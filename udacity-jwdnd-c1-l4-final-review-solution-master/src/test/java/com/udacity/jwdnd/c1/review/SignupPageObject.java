@@ -1,9 +1,12 @@
 package com.udacity.jwdnd.c1.review;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignupPageObject {
 
@@ -35,22 +38,40 @@ public class SignupPageObject {
    @FindBy(className = "display-5")
    private WebElement title;
 
+   private JavascriptExecutor jE;
+
+   private WebDriverWait wait;
+
    public SignupPageObject(WebDriver d){
+      wait = new WebDriverWait(d, 4, 5000);
+      jE = (JavascriptExecutor) d;
+
       PageFactory.initElements(d, this);
    }
 
    public void signup(String firstname, String lastname,
                       String username, String password){
-      firstNameField.sendKeys(firstname);
+      /*firstNameField.sendKeys(firstname);
       lastNameField.sendKeys(lastname);
       usernameField.sendKeys(username);
       passwordField.sendKeys(password);
       submit.click();
+       */
+      jE.executeScript("arguments[0].value='" + firstname + "';", firstNameField);
+      jE.executeScript("arguments[0].value='" + lastname + "';", lastNameField);
+      jE.executeScript("arguments[0].value='" + username + "';", usernameField);
+      jE.executeScript("arguments[0].value='" + password + "';", passwordField);
+      jE.executeScript("arguments[0].click();", submit);
    }
 
    public void backToLoginAfterSignupSuccess(){
-      if (signUpSuccess.isDisplayed()){
+      /*if (signUpSuccess.isDisplayed()){
          loginLink.submit();
+      }
+       */
+      wait.until(ExpectedConditions.elementToBeClickable(signUpSuccess));
+      if (signUpSuccess.isDisplayed()){
+         jE.executeScript("arguments[0].click();", loginLink);
       }
    }
 

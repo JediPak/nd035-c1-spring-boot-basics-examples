@@ -1,5 +1,7 @@
 package com.udacity.jwdnd.c1.review;
 
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,18 +27,27 @@ public class LoginPageObject {
    @FindBy(className = "display-5")
    private WebElement title;
 
+   private JavascriptExecutor jE;
+
    public LoginPageObject(WebDriver d){
+      jE = (JavascriptExecutor) d;
       PageFactory.initElements(d, this);
    }
 
    public void login(String username, String password){
-      usernameField.sendKeys(username);
+      /*usernameField.sendKeys(username);
       passwordField.sendKeys(password);
       submit.click();
+       */
+      jE.executeScript("arguments[0].value='" + username + "';", usernameField);
+      jE.executeScript("arguments[0].value='" + password + "';", passwordField);
+      jE.executeScript("arguments[0].click();", submit);
    }
 
    public void signup(){
-      signUp.click();
+      /*signUp.click();
+       */
+      jE.executeScript("arguments[0].click();", signUp);
    }
 
    public boolean wrongLogin(){
